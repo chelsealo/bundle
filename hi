@@ -1,0 +1,26 @@
+CREATE TABLE `Users` (
+	`user ID` INT,
+	`username` VARCHAR,
+	`user password` VARCHAR
+);
+
+
+
+CREATE TABLE `PurchaseEvent` (
+	`product` VARCHAR,
+	`eventID` INT,
+	`category` VARCHAR,
+	`vendor` VARCHAR,
+	`location` VARCHAR,
+	`pickupStart` TIME,
+	`pickupEnd` TIME,
+	`ownerUserID` INT,
+	`status` VARCHAR,
+	`image` VARCHAR
+);
+
+CREATE TABLE `PurchaseEventUsers` (
+	`purchaseEventID` INT,
+	`userID` INT,
+	`status` VARCHAR
+);
