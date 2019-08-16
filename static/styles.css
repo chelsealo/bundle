@@ -7,7 +7,7 @@ nav .navbar-brand
 /* colors for brand */
 nav .navbar-brand 
 {
-    
+
     color: #5573d3;
     font-weight:800;
     font-size:24px;
@@ -63,8 +63,9 @@ main img
 }
 
 .homeHalfContainer {
-    height: 50%;
-        background-color: #fafafa;
+    padding-top:10%;
+    padding-bottom:20%;
+    background-color: #fafafa;
 
 }
 
