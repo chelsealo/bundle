@@ -19,7 +19,8 @@
 </div>
 <div id="listings">
     {% for l in listings %}
-    <a href=#>
+    <div class ="tile">
+    <a style="text-decoration:none">
         <div id="listingCard">
             <img src={{ l['image'] }}>
         </div>
@@ -32,5 +33,6 @@
             <p> {{ l['location'] }} </p>
             <p> {{ l['pickupStart'] }} </p>
     </a>
+    </div>
     {% endfor %}
 {% endblock %}
