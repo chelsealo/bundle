@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}
+{% endblock %}
+{% block main %}
+
+<div class="container p-5">
+        <div>
+            <h1>Join a bulk order near you</h1>
+            <h2>Order together to save money and protect the planet</h2>
+            <form action="{{ url_for('insert') }}" method="post">
+                <input type="text" name="product" >
+                <input type="number" name="eventId">
+                <input type="text" name="category" >
+                <input type="text" name="vendor" >
+                <input type="number" name="location">
+                <input type="number" name="start" >
+                <input type="number" name="end" >
+                <input type="number" name="ownerId" >
+                <input type="text" name="status">
+                <input type="text" name="image">
+                <input type="submit"> </input>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

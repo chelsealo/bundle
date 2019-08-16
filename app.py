@@ -44,7 +44,6 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
-    """Buy shares of stock"""
     return apology("TODO")
 
 
@@ -93,11 +92,12 @@ def login():
 
 @app.route("/location", methods=["GET", "POST"])
 def location():
-
+    print("location")
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-        location = request.method.get('location')
-        listings = db.execute("SELECT * FROM PurchaseEvent WHERE location = :locationPlaceholder", locationPlaceholder = location)
+        print("post to location")
+        location = request.form.get('location')
+        listings = db.execute("SELECT * FROM PurchaseEvents WHERE location = :locationPlaceholder", locationPlaceholder = location)
 
         return render_template("/nearby.html", location = location, listings = listings)
 
@@ -118,11 +118,36 @@ def logout():
     return redirect("/")
 
 
-@app.route("/account", methods=["GET", "POST"])
-@login_required
-def quote():
-    """Get stock quote."""
-    return apology("TODO")
+@app.route("/insert", methods=["GET", "POST"])
+def insert():
+    if request.method == "POST":
+        print("insert function called")
+        product = request.form.get('product')
+        eventId = request.form.get('eventId')
+        category = request.form.get('category')
+        vendor = request.form.get('vendor')
+        location = request.form.get('location')
+        start = request.form.get('start')
+        end = request.form.get('end')
+        ownerId = request.form.get('ownerId')
+        status = request.form.get('status')
+        image = request.form.get('image')
+        print("args")
+        print(product, eventId, category,
+              vendor, location, start, end,
+              ownerId, status, image)
+        db.execute("INSERT INTO PurchaseEvents (product, eventId, category, vendor, location, "
+                   + "pickupStart, pickupEnd, ownerId, status, image) VALUES "
+            + " (:product, :eventId, :catogory, :vendor, :location, "
+             + ":start, :end, :ownerId, :status, :image)",
+                   product=product, eventId=eventId, catogory=category,
+                   vendor=vendor, location=location, start = start, end = end,
+                   ownerId = ownerId, status = status, image = image)
+        return redirect("/")
+    else:
+        print("running insert GET")
+        return render_template("insert.html")
+
 
 
 @app.route("/register", methods=["GET", "POST"])

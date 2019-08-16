@@ -1,4 +1,9 @@
-{% block locationResults %}
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block main %}
 <input listings="text">
 <div id="showLocation">
     <img src='img/locationIcon.png' alt="pin">
@@ -28,5 +33,5 @@
             <p> {{ l['distance'] }} </p>
             <p> {{ l['deadline'] }} </p>
     </a>
-    {& endfor & }
-    {% endblock %}
+    {% endfor %}
+{% endblock %}
