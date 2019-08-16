@@ -3,13 +3,13 @@
 {% endblock %}
 {% block main %}
 
-<div class="container p-5">
+<div class="homeHalfContainer">
         <div>
-            <h1>Join a bulk order near you</h1>
-            <h2>Order together to save money and protect the planet</h2>
+            <h1 class="homeHeader">Join a bulk order near you</h1>
+            <h2 class="homeSubheader">Order together to save money and protect the planet</h2>
             <form action="{{ url_for('location') }}" method="post">
-                <input type="text" name="location" placeholder="Search...">
-                <input type="submit"> </input>
+                <input class="homeSearch" type="text" name="location" placeholder="Search...">
+                <input class="searchArrow" type="submit" value=">"> </input>
             </form>
 
         </div>

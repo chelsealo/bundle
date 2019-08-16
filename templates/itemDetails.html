@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% itemDetails main %}
+	<div class="container">
+
+		<div class="itemPanelBackground">
+			<div class="itemDetails">
+			<div class="itemImageContainer">
+				<img class="itemImage" src={{ l['image'] }} alt="Charmin toilet paper">
+			<button disabled id="listingCategory" class="categoryTag">{{ l['category']}}</button>
+			</div>
+			<div class="itemText">
+				<h2 id="listingTitle" class="headerText">{{l['product']}}</h2>
+				<h3 id="listingVendor" class="subheaderText">{{ l['vendor'] }}</h3>
+				<hr class="lineBreak">
+				<h2 id="listingPrice" class="priceText">{{ l}}</h2>
+				<h3 id="listingSpots" class="spotsText">4 spots left!</h3>
+	<div class="locationAndTimeContainer">
+					<img class="locationIcon" src="img/locationIcon.png" alt="locationIcon">
+					<p class="locationText">{{ l['location'] }}</p>
+			
+					<img class="timeIcon" src="img/clock.png" alt="clock">
+					<p class="timeText">ends in {{ l['pickupStart'] }} days</p>
+
+		
+				<button id="joinBundle" class="addButton">Join this bundle</button>
+
+			</div>
+
+			</div>
+
+
+		</div>
+		</div>
+		<div class="itemDescription">
+		<h2 class="bundleDetailsHeader">Bundle Details</h2>
+		<p id="listingDescription">Each person will get SIX double rolls of Charmin toilet paper. I plan to order this on August 19 when I get 5 others to chip in. Pick up will be around the Centerridge Community Center.</p>
+
+	</div>
+	</div>
+    {% endfor %}
+{% endblock %}
