@@ -45,3 +45,29 @@ main img
     /* constrain images on small screens */
     max-width: 100%;
 }
+
+.homeHeader {
+    font-family:'Raleway', sans-serif;
+    color:#6B7F82;
+    font-size:24px;
+}
+
+.homeSubheader {
+     font-family:'Raleway', sans-serif;
+    color:#6B7F82;
+    font-size:16px;
+}
+
+.homeSearch {
+    background-color: #fafafa;
+    color: #6B7F82;
+    padding:1%;
+    width:30%;
+}
+
+.searchArrow {
+    color:#fafafa;
+    background-color:#B3EFB2;
+    width:5%;
+    font-size:16px;
+}
