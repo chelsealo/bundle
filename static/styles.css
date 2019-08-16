@@ -1,3 +1,6 @@
+body {
+    color:#6B7F82;
+}
 nav .navbar-brand
 {
     /* size for brand */
@@ -9,7 +12,7 @@ nav .navbar-brand
 {
 
     color: #5573d3;
-    font-weight:800;
+    font-weight:600;
     font-size:24px;
 }
 nav .navbar-brand .red
@@ -77,6 +80,7 @@ main img
     color: #6B7F82;
 border:none;
     width:30%;
+    font-family: 'Lato', sans-serif;
 }
 
 .searchArrow {
