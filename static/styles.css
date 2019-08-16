@@ -46,6 +46,14 @@ main img
     max-width: 100%;
 }
 
+.logo {
+    color: #5573d3;
+    font-weight:800;
+    font-size:24px;
+
+;
+}
+
 .homeHeader {
     font-family:'Raleway', sans-serif;
     color:#6B7F82;
@@ -58,10 +66,15 @@ main img
     font-size:16px;
 }
 
-.homeSearch {
-    background-color: #fafafa;
-    color: #6B7F82;
+.homeHalfContainer {
+    height: 50%;
+        background-color: #fafafa;
 
+}
+
+.homeSearch {
+    color: #6B7F82;
+border:none;
     width:30%;
 }
 
@@ -70,4 +83,5 @@ main img
     background-color:#B3EFB2;
     width:5%;
     font-size:16px;
+    border:none;
 }
