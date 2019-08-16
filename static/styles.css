@@ -1,3 +1,6 @@
+body {
+    color:#6B7F82;
+}
 nav .navbar-brand
 {
     /* size for brand */
@@ -5,9 +8,12 @@ nav .navbar-brand
 }
 
 /* colors for brand */
-nav .navbar-brand .blue
+nav .navbar-brand 
 {
-    color: #537fbe;
+
+    color: #5573d3;
+    font-weight:600;
+    font-size:24px;
 }
 nav .navbar-brand .red
 {
@@ -20,6 +26,10 @@ nav .navbar-brand .yellow
 nav .navbar-brand .green
 {
     color: #2e944b;
+}
+
+nav .nav-item {
+    color: #6B7F82;
 }
 
 main .form-control
@@ -44,4 +54,39 @@ main img
 {
     /* constrain images on small screens */
     max-width: 100%;
+}
+
+
+.homeHeader {
+    font-family:'Raleway', sans-serif;
+    color:#6B7F82;
+    font-size:24px;
+}
+
+.homeSubheader {
+     font-family:'Raleway', sans-serif;
+    color:#6B7F82;
+    font-size:16px;
+}
+
+.homeHalfContainer {
+    padding-top:10%;
+    padding-bottom:20%;
+    background-color: #fafafa;
+
+}
+
+.homeSearch {
+    color: #6B7F82;
+border:none;
+    width:30%;
+    font-family: 'Lato', sans-serif;
+}
+
+.searchArrow {
+    color:#fafafa;
+    background-color:#B3EFB2;
+    width:5%;
+    font-size:16px;
+    border:none;
 }
