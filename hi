@@ -4,8 +4,6 @@ CREATE TABLE `Users` (
 	`user password` VARCHAR
 );
 
-
-
 CREATE TABLE `PurchaseEvent` (
 	`product` VARCHAR,
 	`eventID` INT,
@@ -24,3 +22,7 @@ CREATE TABLE `PurchaseEventUsers` (
 	`userID` INT,
 	`status` VARCHAR
 );
+
+{% block main %}{% endblock %}
+
+

@@ -33,14 +33,12 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///products.db")
+db = SQL("sqlite:///data.db")
 
 
 @app.route("/")
-@login_required
 def index():
-    """Show portfolio of stocks"""
-    return apology("TODO")
+    return render_template("home.html")
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -93,6 +91,21 @@ def login():
     else:
         return render_template("login.html")
 
+@app.route("/location", methods=["GET", "POST"])
+def location():
+
+    # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+        location = request.method.get('location')
+        listings = db.execute("SELECT * FROM PurchaseEvent WHERE location = :locationPlaceholder", locationPlaceholder = location)
+
+        return render_template("/nearby.html", location = location, listings = listings)
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("login.html")
+
+
 
 @app.route("/logout")
 def logout():
@@ -105,7 +118,7 @@ def logout():
     return redirect("/")
 
 
-@app.route("/quote", methods=["GET", "POST"])
+@app.route("/account", methods=["GET", "POST"])
 @login_required
 def quote():
     """Get stock quote."""
@@ -127,7 +140,7 @@ def sell():
 
 def errorhandler(e):
     """Handle error"""
-    return apology(e.name, e.code)
+    return apology(e.name)
 
 
 # listen for errors

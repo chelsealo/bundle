@@ -1,0 +1,32 @@
+{% block locationResults %}
+<input listings="text">
+<div id="showLocation">
+    <img src='img/locationIcon.png' alt="pin">
+    <h2> {{ location }} </h2>
+</div>
+<div id="sorting">
+    <h3>Sort by: </h3>
+    <select class="dropdownList">
+        <option value="price" selected>price</option>
+        <option value="distance">distance</option>
+        <option value="deadline">deadline</option>
+    </select>
+</div>
+<div id="listings">
+    {% for l in listings %}
+    <a href=#>
+        <div id="listingCard">
+            <img src={{ l['imgURL'] }}>
+        </div>
+        <div id="listingHeading">
+            <h4>{{ l['name'] }}</h4>
+            <h5>{{ l['vendor'] }}</h5>
+        </div>
+        <div id="listingInfo">
+            <p> {{ l['price'] }} </p>
+            <p> {{ l['category'] }} </p>
+            <p> {{ l['distance'] }} </p>
+            <p> {{ l['deadline'] }} </p>
+    </a>
+    {& endfor & }
+    {% endblock %}

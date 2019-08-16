@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+{% endblock %}
+{% block main %}
+
+<div class="container p-5">
+        <div>
+            <h1>Join a bulk order near you</h1>
+            <h2>Order together to save money and protect the planet</h2>
+            <form actions="{{ url_for('location') }}" method="post">
+                <input type="text" id="location" placeholder="Search...">
+                <input type="button" class="fa fa-search"> </input>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
