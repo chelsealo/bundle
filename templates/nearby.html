@@ -21,17 +21,16 @@
     {% for l in listings %}
     <a href=#>
         <div id="listingCard">
-            <img src={{ l['imgURL'] }}>
+            <img src={{ l['image'] }}>
         </div>
         <div id="listingHeading">
-            <h4>{{ l['name'] }}</h4>
+            <h4>{{ l['product'] }}</h4>
             <h5>{{ l['vendor'] }}</h5>
         </div>
         <div id="listingInfo">
-            <p> {{ l['price'] }} </p>
             <p> {{ l['category'] }} </p>
-            <p> {{ l['distance'] }} </p>
-            <p> {{ l['deadline'] }} </p>
+            <p> {{ l['location'] }} </p>
+            <p> {{ l['pickupStart'] }} </p>
     </a>
     {% endfor %}
 {% endblock %}

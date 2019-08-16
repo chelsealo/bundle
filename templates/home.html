@@ -3,7 +3,6 @@
 {% endblock %}
 {% block main %}
 
-<<<<<<< HEAD
 <div class="container p-5">
         <div>
             <h1>Join a bulk order near you</h1>
@@ -11,16 +10,6 @@
             <form action="{{ url_for('location') }}" method="post">
                 <input type="text" name="location" placeholder="Search...">
                 <input type="submit"> </input>
-=======
-        <div class="homeHalfContainer">
-            <h1 class="homeHeader">Join a bulk order near you</h1>
-            <h2 class="homeSubheader">Order together to save money and protect the planet</h2>
-            <form actions="{{ url_for('location') }}" method="post">
-                <div class="searchBar">
-                <input class="homeSearch" type="text" id="location" placeholder="Search...">
-                <a href="{% url 'nearby' %}"><input class="searchArrow" value=">" type="button"></input></a>
-            </div>
->>>>>>> cad6d4dff36264903580fad693f2cb6fb12adde5
             </form>
 
         </div>
