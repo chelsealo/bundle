@@ -3,8 +3,7 @@
 {% endblock %}
 {% block main %}
 
-<div class="container p-5">
-        <div>
+        <div class="homeHalfContainer">
             <h1 class="homeHeader">Join a bulk order near you</h1>
             <h2 class="homeSubheader">Order together to save money and protect the planet</h2>
             <form actions="{{ url_for('location') }}" method="post">
@@ -15,5 +14,4 @@
             </form>
 
         </div>
-    </div>
 {% endblock %}

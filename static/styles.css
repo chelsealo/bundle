@@ -5,9 +5,12 @@ nav .navbar-brand
 }
 
 /* colors for brand */
-nav .navbar-brand .blue
+nav .navbar-brand 
 {
-    color: #537fbe;
+    
+    color: #5573d3;
+    font-weight:800;
+    font-size:24px;
 }
 nav .navbar-brand .red
 {
@@ -46,13 +49,6 @@ main img
     max-width: 100%;
 }
 
-.logo {
-    color: #5573d3;
-    font-weight:800;
-    font-size:24px;
-
-;
-}
 
 .homeHeader {
     font-family:'Raleway', sans-serif;
