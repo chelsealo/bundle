@@ -9,7 +9,7 @@
             <form actions="{{ url_for('location') }}" method="post">
                 <div class="searchBar">
                 <input class="homeSearch" type="text" id="location" placeholder="Search...">
-                <a href='templates/nearby.html'><input class="searchArrow" value=">" type="button"></input></a>
+                <a href="{% url 'nearby' %}"><input class="searchArrow" value=">" type="button"></input></a>
             </div>
             </form>
 
